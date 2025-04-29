@@ -1,3 +1,90 @@
+# Task Management System
+
+A simple Task Management System built with Laravel, HTML, jQuery, and AJAX.
+
+## Features
+
+- View, add, edit, and delete tasks.
+- Mark tasks as completed or pending.
+- Filter tasks by status.
+- Pagination for task list.
+- AJAX-powered interactions for a seamless user experience.
+
+## Requirements
+
+- PHP >= 8.1
+- Composer
+- MySQL
+- Node.js and NPM (optional, for frontend assets)
+
+## Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/task-manager.git
+   cd task-manager
+
+Install dependencies:    composer install
+
+cp .env.example .env
+DB_DATABASE=task_manager
+DB_USERNAME=phpmyadmin
+DB_PASSWORD=root
+
+php artisan key:generate
+
+Run migrations:
+php artisan migrate
+
+php artisan serve
+
+
+
+this is table schema
+CREATE TABLE `tasks` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci,
+  `status` enum('pending','completed') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'pending',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
